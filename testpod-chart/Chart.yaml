@@ -1,0 +1,4 @@
+apiVersion: v2
+name: kabirg-pod-chart
+description: A Helm chart to deploy a test pod
+version: 0.1.0
