@@ -10,8 +10,7 @@ spec:
     targetRevision: HEAD
     path: app0
   destination:
-    server: https://5ED34734319348DF09789C3B28D017F3.gr7.us-west-2.eks.amazonaws.com
-    namespace: argocd
+    name: dev-kgupta-worker
   syncPolicy:
     automated:
       prune: true
