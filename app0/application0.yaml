@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/kaguptas/iac-testing.git
     targetRevision: HEAD
-    path: ./
+    path: app0
   destination:
     server: https://5ED34734319348DF09789C3B28D017F3.gr7.us-west-2.eks.amazonaws.com
     namespace: argocd
