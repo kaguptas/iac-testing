@@ -3,12 +3,20 @@ kind: Application
 metadata:
   name: testpod
   namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: https://github.com/argoproj/argocd-example-apps.git
+    repoURL: https://github.com/kaguptas/iac-testing.git
     targetRevision: HEAD
-    path: guestbook
+    path: ./
   destination:
     server: https://kubernetes.default.svc
-    namespace: guestbook
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
