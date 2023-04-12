@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/kaguptas/iac-testing.git
+    repoURL: https://github.com/kaguptas/iac-testing
     targetRevision: HEAD
     path: app0
   destination:
