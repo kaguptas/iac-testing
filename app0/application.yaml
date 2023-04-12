@@ -5,6 +5,8 @@ metadata:
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
 spec:
   project: default
   source:
@@ -12,11 +14,17 @@ spec:
     targetRevision: HEAD
     path: app0
   destination:
-    name: https://5ED34734319348DF09789C3B28D017F3.gr7.us-west-2.eks.amazonaws.com
-    namespace: kabirg
+    name: dev-kgupta-worker
+    namespace: default
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
     - CreateNamespace=true
+    retry:
+      limit: 1
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 1m
