@@ -11,6 +11,7 @@ spec:
     path: app
   destination:
     server: https://kubernetes.default.svc
+    namespace: kabirg
   syncPolicy:
     automated:
       prune: true
