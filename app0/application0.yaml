@@ -11,6 +11,7 @@ spec:
     path: app0
   destination:
     name: dev-kgupta-worker
+    namespace: kabirg
   syncPolicy:
     automated:
       prune: true
