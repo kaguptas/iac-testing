@@ -5,17 +5,15 @@ metadata:
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
-  annotations:
-    argocd.argoproj.io/sync-wave: "5"
 spec:
   project: default
   source:
     repoURL: https://github.com/kaguptas/iac-testing
     targetRevision: HEAD
-    path: app0
+    path: apptwo
   destination:
-    name: dev-kgupta-worker
-    namespace: default
+    server: https://kubernetes.default.svc
+    namespace: kabirg
   syncPolicy:
     automated:
       prune: true
