@@ -12,7 +12,7 @@ spec:
     targetRevision: HEAD
     path: apptwo
   destination:
-    name: dev-kgupta-worker
+    name: infra-k8s-worker
     namespace: kabirg
   syncPolicy:
     automated:
