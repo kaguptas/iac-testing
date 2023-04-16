@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/kaguptas/iac-testing
     targetRevision: HEAD
-    path: apptwosource
+    path: ../apptwosource
   destination:
     name: infra-k8s-worker
     namespace: kabirg
