@@ -12,7 +12,7 @@ spec:
     targetRevision: HEAD
     path: ../apptwosource
   destination:
-    name: infra-k8s-worker
+    name: dev-kgupta-worker
     namespace: kabirg
   syncPolicy:
     automated:
