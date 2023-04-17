@@ -10,9 +10,9 @@ spec:
   source:
     repoURL: https://github.com/kaguptas/iac-testing
     targetRevision: HEAD
-    path: root
+    path: apps
     directory:
-      include: '{app/appsource/application.yaml,apptwo/apptwosource/application.yaml,appthree/appthreesource/application.yaml}'
+      include: '{apps/app/appsource/application.yaml,apps/apptwo/apptwosource/application.yaml,apps/appthree/appthreesource/application.yaml}'
       recurse: true
   destination:
     server: https://kubernetes.default.svc
