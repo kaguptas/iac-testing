@@ -1,28 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root
+  name: dev
   namespace: argocd
   finalizers:
-  - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: ops
   source:
     repoURL: https://github.com/kaguptas/iac-testing
     targetRevision: HEAD
-    path: stack/overlays/dev
-    # directory:
-    #   include: '{apps/app/appsource/application.yaml,apps/apptwo/apptwosource/application.yaml,apps/appthree/appthreesource/application.yaml}'
-    #   recurse: true
+    path: overlays/dev
   destination:
-    server: https://kubernetes.default.svc
+    name: in-cluster
     namespace: kabirg
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
     retry:
       limit: 1
       backoff:
