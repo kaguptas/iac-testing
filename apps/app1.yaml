@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: testpod-2
+  name: testpod-1
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: dev
+  project: ops
   source:
     repoURL: https://github.com/kaguptas/iac-testing
     targetRevision: HEAD
-    path: apps/apptwo/apptwosource
+    path: apps/app
   destination:
-    name: dev-kgupta-worker
+    server: https://kubernetes.default.svc
     namespace: kabirg
   syncPolicy:
     automated:
