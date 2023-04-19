@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/kaguptas/iac-testing
     targetRevision: HEAD
-    path: overlays/dev
+    path: stack/overlays/dev
   destination:
     name: in-cluster
     namespace: kabirg
