@@ -10,10 +10,10 @@ spec:
   source:
     repoURL: https://github.com/kaguptas/iac-testing
     targetRevision: HEAD
-    path: stack/overlays/dev
-    # directory:
-    #   include: '{apps/app/appsource/application.yaml,apps/apptwo/apptwosource/application.yaml,apps/appthree/appthreesource/application.yaml}'
-    #   recurse: true
+    path: ./
+    directory:
+      include: '{stack/overlays/dev/application.yaml,env/dev/application.yaml}'
+      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: kabirg
