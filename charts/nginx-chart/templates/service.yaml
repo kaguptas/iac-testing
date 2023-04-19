@@ -1,9 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "nginx-chart.fullname" . }}
-  labels:
-    {{- include "nginx-chart.labels" . | nindent 4 }}
+  name: NGINX
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +10,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "nginx-chart.selectorLabels" . | nindent 4 }}
+    app: nginx
