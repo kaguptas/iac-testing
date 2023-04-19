@@ -1,5 +1,5 @@
 helmGlobals:
-  chartHome: ../charts/nginx-chart
+  chartHome: ../charts
 
 # Example of inflating the slmetrics helm chart so kustomize can overlay it
 # This can also be done with a custom argocd plugin
