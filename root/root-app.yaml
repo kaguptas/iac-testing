@@ -10,7 +10,8 @@ spec:
   source:
     repoURL: https://github.com/kaguptas/iac-testing
     targetRevision: HEAD
-    path: stack/overlays/dev
+    # path: stack/overlays/dev
+    path: env/dev
     # path: ./
     # directory:
     #   include: '{stack/overlays/dev/application.yaml,env/dev/application.yaml}'
