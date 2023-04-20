@@ -7,14 +7,21 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   project: ops
-  source:
-    repoURL: https://github.com/kaguptas/iac-testing
-    targetRevision: HEAD
-    # path: stack/overlays/dev
-    # path: env/dev
+  sources:
+  - chart: elasticsearch
+    repoURL: https://helm.elastic.co
+    targetRevision: 8.5.1
+  - repoURL: https://github.com/kaguptas/iac-testing
     path: ./
+    targetRevision: HEAD
     directory:
-      include: '{stack/overlays/dev/application.yaml,env/dev/application.yaml}'
+      include: '{stack/overlays/dev/application.yaml}'
+      recurse: true
+  - repoURL: https://github.com/kaguptas/iac-testing-dev
+    path: ./
+    targetRevision: HEAD
+    directory:
+      include: '{env/dev/application.yaml}'
       recurse: true
   destination:
     server: https://kubernetes.default.svc
