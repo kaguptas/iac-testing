@@ -14,7 +14,7 @@ spec:
     # path: env/dev
     path: ./
     directory:
-      include: '{stack/overlays/dev/application.yaml,env/dev/application.yaml}'
+      # include: '{stack/overlays/dev/application.yaml,env/dev/application.yaml}'
       recurse: true
   destination:
     server: https://kubernetes.default.svc
