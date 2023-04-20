@@ -8,9 +8,6 @@ metadata:
 spec:
   project: ops
   sources:
-  - chart: elasticsearch
-    repoURL: https://helm.elastic.co
-    targetRevision: 8.5.1
   - repoURL: https://github.com/kaguptas/iac-testing
     path: ./
     targetRevision: HEAD
