@@ -9,7 +9,9 @@ spec:
   description: Ops Project
   sourceRepos:
   - 'https://github.com/kaguptas/iac-testing'
+  - 'https://github.com/kaguptas/iac-testing-dev'
   - 'https://grafana.github.io/helm-charts'
+  - 'https://helm.elastic.co'
   destinations:
   - namespace: '*'
     server: https://kubernetes.default.svc
